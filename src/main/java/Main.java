@@ -1,8 +1,9 @@
 public class Main {
     public static void main(String[] args) {
         try {
-            User user = new User();
-            Toy toy = new Toy();
+            Box box = new Box();
+            User user = new User(null, "User", box);
+            Toy toy = new Toy(null, "User", box);
             user.start();
             toy.start();
             user.join();

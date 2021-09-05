@@ -1,6 +1,11 @@
 public class Toy extends Thread {
 
-    Box box = Box.getInstance();
+    protected Box box;
+
+    public Toy(ThreadGroup group, String name, Box box) {
+        super(group, name);
+        this.box = box;
+    }
 
     @Override
     public void run() {

@@ -2,16 +2,6 @@ public class Box {
 
     volatile boolean boxToggleSwitch;
 
-    private static Box box = null;
-
-    private Box() {
-    }
-
-    public static Box getInstance() {
-        if (box == null) box = new Box();
-        return box;
-    }
-
     public boolean isBoxToggleSwitch() {
         return boxToggleSwitch;
     }

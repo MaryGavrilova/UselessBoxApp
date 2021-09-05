@@ -2,7 +2,12 @@ public class User extends Thread {
     static final int REQUIRED_NUMBER_OF_OPENINGS = 3;
     static final int TIME_OUT = 3000;
 
-    Box box = Box.getInstance();
+    protected Box box;
+
+    public User(ThreadGroup group, String name, Box box) {
+        super(group, name);
+        this.box = box;
+    }
 
     @Override
     public void run() {
